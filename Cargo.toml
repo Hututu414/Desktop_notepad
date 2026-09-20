@@ -1,0 +1,12 @@
+[package]
+name = "desktop-task-queue"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+eframe = { version = "0.36.1", default-features = false, features = ["glow", "default_fonts"] }
+egui = "0.36.1"
+# 只为从 eframe::Frame 取 HWND；eframe 本来就依赖它，版本与 Cargo.lock 一致。
+raw-window-handle = "0.6.2"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.151"
